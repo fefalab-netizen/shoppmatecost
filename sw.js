@@ -1,5 +1,5 @@
-const CACHE='cartpilot-core-v2';
-const CORE=['./','./index.html','./manifest.webmanifest','./icon.svg','./catalog-lookup.js'];
+const CACHE='cartpilot-core-v3';
+const CORE=['./','./index.html','./manifest.webmanifest','./icon.svg','./catalog-lookup.js','./open-prices.js'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)));
   self.skipWaiting();
