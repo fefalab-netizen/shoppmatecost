@@ -30,6 +30,12 @@ A static, mobile-first web app. Not affiliated with Costco.
 - All carts, prices, and past trips are saved locally on the device. No database, account, or remote sync. Clearing site data erases local data.
 - App shell is cached for offline use after the first hosted load; name lookups and fallback scanner CDN may require internet.
 
+## Open Prices historical price lookup
+
+When a barcode is scanned, the app queries the public Open Prices API for historical USD unit-price observations. Costco-tagged submissions appear separately from prices at other or unspecified stores. Each offer includes its reported store and date where available. Selecting **Use price** explicitly copies that value to the editable price field; prices are never automatically applied.
+
+The Open Prices database is community contributed and may have no data for a scanned barcode. Observations are **not live Costco prices** and can be outdated, discounted, or associated with different stores. The app makes read-only public requests and does not transmit cart history. Source: https://prices.openfoodfacts.org/ (Open Database License / ODbL).
+
 ## Pricing limitation
 
 Costco.com price/availability can differ from in-warehouse pricing and can vary by location. There is no automatic Costco live in-store price integration in this MVP. Prices must be entered by the shopper and totals are **estimates**, including taxes.
@@ -43,4 +49,4 @@ Official Costco information:
 - `index.html`: app and all application logic.
 - `manifest.webmanifest`: home-screen installation metadata.
 - `sw.js`: basic offline app shell cache.
-- `icon.svg`: app icon.
+- `icon.svg`: app icon.\n- `catalog-lookup.js`: product name and photo lookup.\n- `open-prices.js`: historical community price lookup.
