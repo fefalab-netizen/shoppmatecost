@@ -1,0 +1,11 @@
+{
+  "name": "CartPilot — Warehouse Shopping Tracker",
+  "short_name": "CartPilot",
+  "description": "Scan barcodes, track items and stay on budget during warehouse shopping.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#0a3266",
+  "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
